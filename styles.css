@@ -1,0 +1,90 @@
+body, figure, h2, ul, li{
+  margin: 0;
+  padding: 0;
+}
+/******************************************************************************/
+body{
+  background-color: #333;
+  color: white;
+  font-family: arial;
+}
+/******************************************************************************/
+#box{
+  width: 480px;
+  height: 360px;
+  opacity: 0.7;
+  position: relative;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-240px);
+  overflow: hidden;
+}
+/******************************************************************************/
+#box figure::after{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 480px;
+  height: 360px;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.7s;
+}
+#box:hover figure::after{
+  opacity: 1;
+  transition: 0.7s;
+}
+/******************************************************************************/
+#box>figure>img{
+  transform: scale(1.0);
+  transition: 0.5s;
+}
+#box:hover img{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+/******************************************************************************/
+#box>figure figcaption{
+  position: absolute;
+  z-index: 10;
+  left: 50px;
+  top: 60px;
+}
+#box figcaption h2{
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#box figcaption>h2>span{
+  font-weight: 900;
+  text-shadow: 1px 0 0 white;
+}
+#box figcaption ul{
+  width: 330px;
+}
+#box figcaption ul li{
+  list-style: none;
+  letter-spacing: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #444;
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 6px 17px;
+  transform: translateX(-310px);
+  transition: 0.4s;
+}
+#box:hover li{
+  transform: translateX(0);
+  transition: 0.4s;
+}
+#box:hover #middle{
+  transition-delay: 0.07s;
+}
+#box:hover #bottom{
+  transition-delay: 0.14s;
+}
+/******************************************************************************/
